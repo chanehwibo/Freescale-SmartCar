@@ -1,0 +1,23 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\objects\startup_mk60d10.o"
+".\objects\main.o"
+".\objects\iic.o"
+".\objects\ov7725.o"
+".\objects\oled.o"
+".\objects\control.o"
+".\objects\servo_pd.o"
+".\objects\motor_pid.o"
+".\objects\mk60_ftm.o"
+".\objects\mk60_gpio.o"
+".\objects\mk60_lptmr.o"
+".\objects\mk60_pit.o"
+".\objects\mk60_sdhc.o"
+".\objects\mk60_spi.o"
+".\objects\mk60_sys.o"
+".\objects\mk60_uart.o"
+".\objects\mk60_adc.o"
+".\objects\k60_dma.o"
+--strict --scatter ".\Objects\mk60_lib_test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\mk60_lib_test.map" -o .\Objects\mk60_lib_test.axf
